@@ -6,7 +6,7 @@ import YouTube from "react-youtube"
 
 function RowPost(props) {
   const [movies,setMovies]=useState([])
-  const [urlId,setUrlId]=useState([])
+  const [urlId,setUrlId]=useState('')
 
   
   useEffect(()=>{
@@ -16,7 +16,7 @@ function RowPost(props) {
     }).catch(err=>{
       alert('networkerror')
     })
-  },[])
+  },[props.url])
   const opts = {
     height: '390',
     width: '100%',
